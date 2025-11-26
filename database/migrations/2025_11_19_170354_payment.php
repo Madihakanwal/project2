@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->integer("order_id");
-            $table->integer("payment_method")->nullable();
-            $table->integer("trasaction_id")->default(1);
+            $table->string("payment_method")->nullable();
+            $table->string("trasaction_id")->default(1);
             $table->decimal("amount", 10, 2);
             $table->boolean("status")->default(true);
             $table->timestamps();
