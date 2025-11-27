@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer("order_id");
             $table->string("payment_method")->nullable();
-            $table->string("trasaction_id")->default(1);
+            $table->string("transaction_id")->default(1);
             $table->decimal("amount", 10, 2);
             $table->boolean("status")->default(true);
             $table->timestamps();
