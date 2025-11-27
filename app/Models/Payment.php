@@ -23,4 +23,9 @@ class Payment extends Model
         'status' => 'string',     // or boolean if it's 0/1
     ];
 
+    public function order()
+    {
+        return $this->belongsTo(Order::class);
+    }
+
 }

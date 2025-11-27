@@ -25,4 +25,14 @@ class SubCategory extends Model
         'image' => 'string',
     ];
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+
 }

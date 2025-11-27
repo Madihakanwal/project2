@@ -16,10 +16,20 @@ class Category extends Model
         'image'
     ];
     protected $casts = [
-    'name'        => 'string',
-    'slug'        => 'string',
-    'description' => 'string',
-    'status'      => 'boolean', // Usually active/inactive
-    'image'       => 'string',
-];
+        'name' => 'string',
+        'slug' => 'string',
+        'description' => 'string',
+        'status' => 'boolean', // Usually active/inactive
+        'image' => 'string',
+    ];
+
+    public function subCategories()
+    {
+        return $this->hasMany(SubCategory::class);
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

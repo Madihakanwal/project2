@@ -25,4 +25,14 @@ class Review extends Model
         'status' => 'string',   // 'approved' | 'pending'
     ];
 
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }
