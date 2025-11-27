@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->integer("order_id");
+            $table->unsignedBigInteger("order_id")->nullable();
             $table->string("payment_method")->nullable();
             $table->string("transaction_id")->default(1);
             $table->decimal("amount", 10, 2);
